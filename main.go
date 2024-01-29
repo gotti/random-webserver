@@ -111,7 +111,7 @@ func (c *OpenAIClient) CreateCompletion(system, prompt string) (string, error) {
 func main() {
   // get apikey from env API_KEY
   apikey := os.Getenv("API_KEY")
-  client := NewOpenAIClient(apikey, "gpt-3.5-turbo-1106")
+  client := NewOpenAIClient(apikey, "gpt-4")
   http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
     if strings.Contains(r.URL.Path, "favicon.ico") {
       w.WriteHeader(http.StatusNotFound)
